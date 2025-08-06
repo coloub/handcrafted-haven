@@ -37,7 +37,7 @@ export default function SellerProfile({
           <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
             <Image
               src={avatar}
-              alt={`${name}'s profile picture`}
+              alt={`${name}&apos;s profile picture`}
               fill
               className="rounded-full object-cover ring-4 ring-blue-100"
               sizes="(max-width: 768px) 96px, 128px"
@@ -127,7 +127,7 @@ export default function SellerProfile({
               No products yet
             </h3>
             <p className="text-gray-500">
-              This seller hasn't listed any products yet.
+              This seller hasn&apos;t listed any products yet.
             </p>
           </div>
         )}

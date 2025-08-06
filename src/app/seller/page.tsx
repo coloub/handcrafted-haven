@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import SellerProfile from '@/components/SellerProfile';
 
 // Datos simulados del vendedor
 const sellerData = {
   name: "María Elena González",
   avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-  biography: "I'm a passionate artisan with over 15 years of experience in traditional crafts. Based in the beautiful mountains of Guatemala, I specialize in handwoven textiles, ceramic pottery, and sustainable home goods. Each piece I create tells a story of cultural heritage and environmental consciousness. My work is inspired by ancient Mayan techniques passed down through generations, combined with contemporary design sensibilities.",
+  biography: "I&apos;m a passionate artisan with over 15 years of experience in traditional crafts. Based in the beautiful mountains of Guatemala, I specialize in handwoven textiles, ceramic pottery, and sustainable home goods. Each piece I create tells a story of cultural heritage and environmental consciousness. My work is inspired by ancient Mayan techniques passed down through generations, combined with contemporary design sensibilities.",
   joinedDate: "March 2020",
   rating: 4.8,
   totalSales: 247,
@@ -61,19 +62,19 @@ export default function SellerPage() {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex text-sm text-gray-600">
-            <a 
+            <Link 
               href="/" 
               className="hover:text-blue-600 transition-colors"
             >
               Home
-            </a>
+            </Link>
             <span className="mx-2">/</span>
-            <a 
+            <Link 
               href="/products" 
               className="hover:text-blue-600 transition-colors"
             >
               Products
-            </a>
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900 font-medium">
               {sellerData.name}

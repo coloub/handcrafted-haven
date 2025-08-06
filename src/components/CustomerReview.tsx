@@ -3,14 +3,14 @@ const customerReviewsData = [
   {
     id: 1,
     customerName: "Sarah Johnson",
-    reviewText: "Absolutely love my handwoven ceramic bowl! The craftsmanship is incredible and you can really feel the love and care that went into making it. It's become my favorite piece in the kitchen.",
+    reviewText: "Absolutely love my handwoven ceramic bowl! The craftsmanship is incredible and you can really feel the love and care that went into making it. It&apos;s become my favorite piece in the kitchen.",
     rating: 5,
     location: "Seattle, WA"
   },
   {
     id: 2,
     customerName: "Michael Chen",
-    reviewText: "The wooden cutting board I purchased exceeded my expectations. The quality is outstanding and it's clear that this was made by a true artisan. Highly recommend Handcrafted Haven!",
+    reviewText: "The wooden cutting board I purchased exceeded my expectations. The quality is outstanding and it&apos;s clear that this was made by a true artisan. Highly recommend Handcrafted Haven!",
     rating: 5,
     location: "Portland, OR"
   }
@@ -64,7 +64,7 @@ function ReviewCard({
 
       {/* Review Text */}
       <blockquote className="text-gray-700 text-base leading-relaxed mb-4">
-        "{reviewText}"
+        &quot;{reviewText}&quot;
       </blockquote>
 
       {/* Customer Info */}

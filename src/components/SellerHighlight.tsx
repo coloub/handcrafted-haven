@@ -10,7 +10,7 @@ export default function SellerHighlight() {
     name: "Elena Morales",
     location: "Antigua, Guatemala",
     craft: "Traditional Weaving & Ceramics",
-    story: "For over 20 years, I've been preserving the ancient art of Mayan textile weaving passed down through five generations of women in my family. Every thread tells a story of our heritage, and every pattern carries the wisdom of our ancestors. My ceramic work is inspired by the natural beauty of Guatemala's highlands.",
+    story: "For over 20 years, I&apos;ve been preserving the ancient art of Mayan textile weaving passed down through five generations of women in my family. Every thread tells a story of our heritage, and every pattern carries the wisdom of our ancestors. My ceramic work is inspired by the natural beauty of Guatemala&apos;s highlands.",
     speciality: "Hand-woven huipils and ceramic pottery",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     yearsActive: 20,
@@ -83,7 +83,7 @@ export default function SellerHighlight() {
 
               {/* Story */}
               <blockquote className="text-gray-700 text-base lg:text-lg leading-relaxed mb-6 italic border-l-4 border-blue-500 pl-6">
-                "{featuredArtisan.story}"
+                &quot;{featuredArtisan.story}&quot;
               </blockquote>
 
               {/* Specialty */}
