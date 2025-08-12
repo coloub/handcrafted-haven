@@ -8,9 +8,30 @@ import { useAuth } from '@/contexts/AuthContext';
 
 interface OrderData {
   orderId: string;
-  items: any[];
-  shippingInfo: any;
-  paymentInfo: any;
+  items: Array<{
+    id: string | number;
+    title: string;
+    description: string;
+    price: number;
+    image: string;
+    seller?: string;
+    quantity: number;
+  }>;
+  shippingInfo: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    address: string;
+    city: string;
+    state: string;
+    zipCode: string;
+    country: string;
+  };
+  paymentInfo: {
+    method: string;
+    cardNumber: string;
+  };
   totals: {
     subtotal: number;
     shipping: number;

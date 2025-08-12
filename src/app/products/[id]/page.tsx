@@ -74,7 +74,7 @@ export default function ProductDetailPage() {
   const { addItem, isInCart, getItemQuantity, updateQuantity } = useCart();
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   
-  const [product, setProduct] = useState<any>(null);
+  const [product, setProduct] = useState<typeof allProducts[0] | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [showAddedMessage, setShowAddedMessage] = useState(false);

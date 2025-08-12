@@ -135,7 +135,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       // Validación básica (en producción esto sería una llamada real a la API)
       const storedUsers = JSON.parse(localStorage.getItem('registered_users') || '[]');
-      const user = storedUsers.find((u: any) => u.email === email && u.password === password);
+      const user = storedUsers.find((u: { email: string; password: string }) => u.email === email && u.password === password);
       
       if (user) {
         const authenticatedUser: User = {
