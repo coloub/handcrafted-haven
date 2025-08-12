@@ -1,27 +1,30 @@
 import ProductCard from './ProductCard';
 
-// Datos simulados para productos destacados
+// Datos simulados para productos destacados con IDs únicos
 const featuredProductsData = [
   {
     id: 1,
     title: "Artisan Ceramic Mug",
     description: "Handcrafted ceramic mug with unique glaze patterns. Perfect for your morning coffee.",
     price: 32.99,
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    seller: "Elena Morales"
   },
   {
     id: 2,
     title: "Woven Basket Set",
     description: "Beautiful set of 3 handwoven baskets made from sustainable materials.",
     price: 89.50,
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    seller: "María González"
   },
   {
     id: 3,
     title: "Hand-carved Wooden Spoon",
     description: "Elegant wooden spoon carved from premium oak wood with smooth finish.",
     price: 18.75,
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    seller: "Carlos Mendoza"
   }
 ];
 
@@ -48,10 +51,12 @@ export default function FeaturedProducts() {
           {featuredProductsData.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               title={product.title}
               description={product.description}
               price={product.price}
               image={product.image}
+              seller={product.seller}
             />
           ))}
         </div>
