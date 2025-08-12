@@ -173,7 +173,7 @@ export default function ProductCard({
         </div>
       </Link>
 
-      {/* Indicadores adicionales */}
+      {/* Indicadores adicionale */}
       <div className="px-4 pb-4">
         <div className="flex items-center justify-between text-xs text-gray-500">
           <div className="flex items-center gap-1">
