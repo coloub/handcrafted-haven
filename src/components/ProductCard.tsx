@@ -25,7 +25,7 @@ export default function ProductCard({
   seller,
   className = ""
 }: ProductCardProps) {
-  const { addItem, isInCart, getItemQuantity } = useCart();
+  const { addItem, getItemQuantity } = useCart();
   const { isFavorite, toggleFavorite } = useFavorites();
   const [showAddedMessage, setShowAddedMessage] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);

@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -11,7 +10,6 @@ export default function CartPage() {
   const router = useRouter();
   const { items, totalItems, totalPrice, updateQuantity, removeItem, clearCart } = useCart();
   const { isAuthenticated } = useAuth();
-  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleQuantityChange = (id: number, newQuantity: number) => {
     if (newQuantity < 1) {
@@ -231,14 +229,9 @@ export default function CartPage() {
                 {/* Botón de checkout */}
                 <button
                   onClick={handleProceedToCheckout}
-                  disabled={isProcessing}
-                  className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${
-                    isProcessing
-                      ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
-                      : 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg'
-                  }`}
+                  className="w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-200 bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg"
                 >
-                  {isProcessing ? 'Procesando...' : 'Proceder al Checkout'}
+                  Proceder al Checkout
                 </button>
 
                 {!isAuthenticated && (

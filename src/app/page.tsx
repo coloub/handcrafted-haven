@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import CustomerReview from '@/components/CustomerReview';
 import CallToAction from '@/components/CallToAction';
@@ -33,7 +34,7 @@ export default function Home() {
           
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a
+            <Link
               href="/products"
               className="group inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
@@ -52,9 +53,9 @@ export default function Home() {
                   d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                 />
               </svg>
-            </a>
+            </Link>
             
-            <a
+            <Link
               href="/seller"
               className="group inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold border-2 border-blue-200 hover:border-blue-300 hover:bg-blue-50 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
@@ -73,7 +74,7 @@ export default function Home() {
                   d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Trust Indicators */}
@@ -230,10 +231,10 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="/products" className="hover:text-white transition-colors">Products</a></li>
-                <li><a href="/seller" className="hover:text-white transition-colors">Artisans</a></li>
-                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
+                <li><Link href="/seller" className="hover:text-white transition-colors">Artisans</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
 
@@ -241,10 +242,10 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="/help" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="/shipping" className="hover:text-white transition-colors">Shipping Info</a></li>
-                <li><a href="/returns" className="hover:text-white transition-colors">Returns</a></li>
-                <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><Link href="/help" className="hover:text-white transition-colors">Help Center</Link></li>
+                <li><Link href="/shipping" className="hover:text-white transition-colors">Shipping Info</Link></li>
+                <li><Link href="/returns" className="hover:text-white transition-colors">Returns</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               </ul>
             </div>
           </div>

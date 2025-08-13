@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ProductCard from './ProductCard';
 
 // Datos simulados para productos destacados con IDs únicos
@@ -63,7 +64,7 @@ export default function FeaturedProducts() {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/products"
             className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
             aria-label="View all handcrafted products"
@@ -83,7 +84,7 @@ export default function FeaturedProducts() {
                 d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

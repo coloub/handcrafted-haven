@@ -25,7 +25,7 @@ export default function ProductCard({
   seller,
   className = ""
 }: ProductCardProps) {
-  const { addItem, isInCart, getItemQuantity } = useCart();
+  const { addItem, getItemQuantity } = useCart();
   const { isFavorite, toggleFavorite } = useFavorites();
   const [showAddedMessage, setShowAddedMessage] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -173,7 +173,7 @@ export default function ProductCard({
         </div>
       </Link>
 
-      {/* Indicadores adicionale */}
+      {/* Indicadores adicionales */}
       <div className="px-4 pb-4">
         <div className="flex items-center justify-between text-xs text-gray-500">
           <div className="flex items-center gap-1">

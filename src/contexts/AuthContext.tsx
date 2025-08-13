@@ -108,6 +108,15 @@ interface AuthProviderProps {
   children: ReactNode;
 }
 
+interface StoredUser {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  avatar?: string;
+  joinedDate: string;
+}
+
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
@@ -134,8 +143,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Validación básica (en producción esto sería una llamada real a la API)
-      const storedUsers = JSON.parse(localStorage.getItem('registered_users') || '[]');
-      const user = storedUsers.find((u: { email: string; password: string }) => u.email === email && u.password === password);
+      const storedUsers = JSON.parse(localStorage.getItem('registered_users') || '[]') as StoredUser[];
+      const user = storedUsers.find((u: StoredUser) => u.email === email && u.password === password);
       
       if (user) {
         const authenticatedUser: User = {
@@ -169,8 +178,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Verificar si el email ya existe
-      const storedUsers = JSON.parse(localStorage.getItem('registered_users') || '[]');
-      const emailExists = storedUsers.some((u: any) => u.email === email);
+      const storedUsers = JSON.parse(localStorage.getItem('registered_users') || '[]') as StoredUser[];
+      const emailExists = storedUsers.some((u: StoredUser) => u.email === email);
       
       if (emailExists) {
         dispatch({ type: 'REGISTER_ERROR' });
@@ -178,7 +187,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       }
       
       // Crear nuevo usuario
-      const newUser: User & { password: string } = {
+      const newUser: StoredUser = {
         id: `user_${Date.now()}`,
         name,
         email,

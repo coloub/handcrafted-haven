@@ -93,7 +93,7 @@ export default function RegisterPage() {
           general: 'Este email ya está registrado. Prueba con otro email o inicia sesión.'
         });
       }
-    } catch (error) {
+    } catch {
       setErrors({
         general: 'Error al crear la cuenta. Inténtalo de nuevo.'
       });

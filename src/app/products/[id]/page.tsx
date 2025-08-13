@@ -71,7 +71,7 @@ const allProducts = [
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
-  const { addItem, isInCart, getItemQuantity, updateQuantity } = useCart();
+  const { addItem, getItemQuantity } = useCart();
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   
   const [product, setProduct] = useState<typeof allProducts[0] | null>(null);

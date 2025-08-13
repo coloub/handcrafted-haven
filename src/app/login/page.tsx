@@ -74,7 +74,7 @@ export default function LoginPage() {
           general: 'Credenciales incorrectas. Verifica tu email y contraseña.'
         });
       }
-    } catch (error) {
+    } catch {
       setErrors({
         general: 'Error al iniciar sesión. Inténtalo de nuevo.'
       });
